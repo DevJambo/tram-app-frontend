@@ -6,10 +6,10 @@ import TramStopSelect from "../blocks/tram-stop-select";
 const HomePage = () => {
   const [tramData, setTramData] = useState([]);
 
-  const getTramData = async () => {
+  const getTramData = async (station) => {
     const { REACT_APP_API_URL } = process.env;
-    const response = await axios.get(REACT_APP_API_URL);
-    await setTramData(response.data);
+    const response = await axios.get(`${REACT_APP_API_URL}?station=${station}`);
+    setTramData(response.data);
     console.log(tramData);
   };
   return (
