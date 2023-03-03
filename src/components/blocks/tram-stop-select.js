@@ -1,9 +1,11 @@
 import React, { useState } from "react";
+import PropTypes from "prop-types";
 
-const TramStopSelect = () => {
+const TramStopSelect = ({ handleSearch }) => {
   const [station, setStation] = useState("Select Tram Stop");
   const handleSelectStation = (event) => {
     setStation(event.target.value);
+    handleSearch();
   };
   return (
     <div>
@@ -137,6 +139,10 @@ const TramStopSelect = () => {
       </label>
     </div>
   );
+};
+
+TramStopSelect.propTypes = {
+  handleSearch: PropTypes.func.isRequired,
 };
 
 export default TramStopSelect;
