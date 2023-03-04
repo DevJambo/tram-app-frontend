@@ -3,31 +3,39 @@ import PropTypes from "prop-types";
 import tramstops from "../../content/tramstops.json";
 
 const TramStopSelect = ({ handleSearch }) => {
-  const [station, setStation] = useState("Select Tram Stop");
+  const [station, setStation] = useState("Select Station");
   const handleSelectStation = async (event) => {
     setStation(event.target.value);
+  };
+  const handleSubmit = (event) => {
     handleSearch(station);
+    event.preventDefault();
   };
   return (
     <div>
-      <label htmlFor="tram-stop-select">
-        Select Tram Stop
-        <select
-          id="tram-stop-select"
-          name="tram-stop-select"
-          value={station}
-          onChange={handleSelectStation}
-        >
-          {tramstops.map((tramstop) => {
-            return (
-              <option key={tramstop} value={tramstop}>
-                {tramstop}
-              </option>
-            );
-          })}
-          ;
-        </select>
-      </label>
+      <form onSubmit={handleSubmit} className="form">
+        <label htmlFor="tram-stop-select">
+          Select Tram Stop
+          <select
+            id="tram-stop-select"
+            name="tram-stop-select"
+            value={station}
+            onChange={handleSelectStation}
+          >
+            {tramstops.map((tramstop) => {
+              return (
+                <option key={tramstop} value={tramstop}>
+                  {tramstop}
+                </option>
+              );
+            })}
+            ;
+          </select>
+        </label>
+        <button className="submit-button" type="submit">
+          Search Station
+        </button>
+      </form>
     </div>
   );
 };
