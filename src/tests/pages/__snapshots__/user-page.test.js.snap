@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`UserPage renders correctly 1`] = `
+<DocumentFragment>
+  <div>
+    <h2
+      class="user-header"
+    >
+      User Page
+    </h2>
+  </div>
+</DocumentFragment>
+`;

@@ -1,17 +1,13 @@
 import React from "react";
-// import PropTypes from "prop-types";
-// import PropTypes from "prop-types";
 
 const Results = ({ tramData }) => {
-  console.log(tramData[0]);
-  if (tramData[0]) {
-    console.log(tramData[0].Line);
-  }
+  // console.log(tramData[0]);
+  // if (tramData[0]) {
+  //   console.log(tramData[0].Line);
+  // }
 
   const incomingTrams = tramData[0] ? tramData[0] : [];
   const departingTrams = tramData[1] ? tramData[1] : [];
-
-  // return <p>Hi!</p>;
 
   return (
     <>
@@ -29,9 +25,5 @@ const Results = ({ tramData }) => {
     </>
   );
 };
-
-// tramData.PropTypes = {
-//   filteredData: PropTypes.func.isRequired,
-// };
 
 export default Results;

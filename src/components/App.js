@@ -5,6 +5,7 @@ import Navbar from "./blocks/navbar";
 import LoginPage from "./pages/login-page";
 import TramMap from "./pages/tram-map";
 import HomePage from "./pages/home";
+import UserPage from "./pages/user-page";
 
 const App = () => {
   return (
@@ -14,6 +15,7 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/tram-map" element={<TramMap />} />
         <Route path="/login-page" element={<LoginPage />} />
+        <Route path="/user-page" element={<UserPage />} />
       </Routes>
     </div>
   );
