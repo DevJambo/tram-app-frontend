@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
-import "../../styles/home.css";
+import "../../styles/pages/home.css";
 import TramStopSelect from "../blocks/tram-stop-select";
 import Results from "../blocks/results";
 
@@ -13,7 +13,7 @@ const HomePage = () => {
     await setTramData(response.data);
   };
   return (
-    <div>
+    <div className="home-page">
       <h2 className="home-header">Home Page</h2>
       <img
         className="tram-map"
