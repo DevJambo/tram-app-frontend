@@ -13,7 +13,7 @@ const HomePage = () => {
     await setTramData(response.data);
   };
   return (
-    <div>
+    <div className="home-page">
       <h2 className="home-header">Home Page</h2>
       <img
         className="tram-map"
