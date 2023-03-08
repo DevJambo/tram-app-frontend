@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import tramstops from "../../content/tramstops.json";
+import FavouriteButton from "./favourites";
 
 const TramStopSelect = ({ handleSearch }) => {
   const [station, setStation] = useState("Select Station");
@@ -36,6 +37,7 @@ const TramStopSelect = ({ handleSearch }) => {
           Search Station
         </button>
       </form>
+      <FavouriteButton />
     </div>
   );
 };

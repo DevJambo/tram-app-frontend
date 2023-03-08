@@ -39,14 +39,11 @@ const LoginPage = () => {
 
   return (
     <div>
-      <h2>React Google Login</h2>
-      <br />
-      <br />
       {profile ? (
         <div>
           <h3>User Logged in</h3>
           <p>Name: {profile.name}</p>
-          <p>Email Address: {profile.email}</p>
+          <p>Email: {profile.email}</p>
           <button onClick={logOut}>Log out</button>
         </div>
       ) : (
