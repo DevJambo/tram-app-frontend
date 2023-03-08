@@ -1,7 +1,7 @@
 import React from "react";
 
-const FavouriteButton = () => {
-  return <button type="submit">Favourites</button>;
+const Favourites = () => {
+  return <p>Please login to see favourites</p>;
 };
 
-export default FavouriteButton;
+export default Favourites;

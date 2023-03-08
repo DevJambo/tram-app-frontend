@@ -3,6 +3,7 @@ import axios from "axios";
 import "../../styles/pages/home.css";
 import TramStopSelect from "../blocks/tram-stop-select";
 import Results from "../blocks/results";
+import Favourites from "../blocks/favourites";
 
 const HomePage = () => {
   const [tramData, setTramData] = useState([]);
@@ -22,6 +23,7 @@ const HomePage = () => {
       />
       <TramStopSelect handleSearch={getTramData} />
       <Results tramData={tramData} />
+      <Favourites />
     </div>
   );
 };
