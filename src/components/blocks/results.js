@@ -18,14 +18,12 @@ const Results = ({ tramData }) => {
       <br />
       <p> {incomingTrams ? incomingTrams.Dest0 : `?`}</p>
       <p>
-        {" "}
         {incomingTrams && incomingTrams.Wait0 !== ""
           ? `${incomingTrams.Wait0} mins`
           : ``}
       </p>
       <p> {incomingTrams ? incomingTrams.Dest1 : `?`}</p>
       <p>
-        {" "}
         {incomingTrams && incomingTrams.Wait1 !== ""
           ? `${incomingTrams.Wait1} mins`
           : ``}
@@ -34,14 +32,12 @@ const Results = ({ tramData }) => {
       <br />
       <p> {departingTrams ? departingTrams.Dest0 : `?`}</p>
       <p>
-        {" "}
         {departingTrams && departingTrams.Wait0 !== ""
           ? `${departingTrams.Wait0} mins`
           : ``}
       </p>
       <p> {departingTrams ? departingTrams.Dest1 : `?`}</p>
       <p>
-        {" "}
         {departingTrams && departingTrams.Wait1 !== ""
           ? `${departingTrams.Wait1} mins`
           : ``}

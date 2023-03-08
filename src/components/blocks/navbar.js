@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import LoginPage from "../pages/login-page";
 import "../../styles/blocks/navbar.css";
 
 const Navbar = () => {
@@ -18,6 +19,7 @@ const Navbar = () => {
         <li className="navbar-links-item">
           <Link to="/user-page">Profile</Link>
         </li>
+        <LoginPage />
       </ul>
     </div>
   );
