@@ -12,6 +12,11 @@ const LoginPage = () => {
     onError: (error) => console.log("Login Failed:", error),
   });
 
+  const logOut = () => {
+    googleLogout();
+    setProfile(null);
+  };
+
   useEffect(() => {
     if (user) {
       axios
@@ -32,10 +37,6 @@ const LoginPage = () => {
   }, [user]);
 
   // log out function to log the user out of google and set the profile array to null
-  const logOut = () => {
-    googleLogout();
-    setProfile(null);
-  };
 
   return (
     <div>
