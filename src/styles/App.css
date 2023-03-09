@@ -1,8 +1,5 @@
-.App {
-  text-align: center;
-  background-image:("/images/honeycomb1.jpg");
-}
-.App-header {
+
+/* .App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;
@@ -10,5 +7,34 @@
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: black;
+} */
+
+/* 
+navbar: 
+
+background color: black
+text color: white
+selected link color
+navbar button 1
+
+page body:
+
+body background color
+text color 1
+
+buttons:
+
+button 1 color
+button 1 text color
+button 2 color
+button 2 text color
+
+
+
+*/
+:root {
+  --navbar-background-color: rgb(13, 13, 13);
+  --navbar-link-color: rgb(243, 243, 243);
+  --navbar-active-link-color: rgb(253, 175, 1);
 }

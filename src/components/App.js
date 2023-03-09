@@ -5,6 +5,7 @@ import { googleLogout, useGoogleLogin } from "@react-oauth/google";
 import Navbar from "./blocks/navbar";
 import TramMap from "./pages/tram-map";
 import HomePage from "./pages/home";
+import "../styles/global.css";
 import "../styles/App.css";
 
 const App = () => {

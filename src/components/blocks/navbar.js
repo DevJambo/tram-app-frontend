@@ -8,10 +8,14 @@ const Navbar = ({ user, profile, login, logOut }) => {
     <div className="Navbar">
       <ul className="navbar-links">
         <li className="navbar-links-item">
-          <Link to="/">Home</Link>
+          <Link className="navbar-link" to="/">
+            Home
+          </Link>
         </li>
         <li className="navbar-links-item">
-          <Link to="/tram-map">Tram Map</Link>
+          <Link className="navbar-link" to="/tram-map">
+            Tram Map
+          </Link>
         </li>
         {/* <li className="navbar-links-item">
           <Link to="/login-page">Login/Signup</Link>
