@@ -3,7 +3,7 @@ import PropTypes from "prop-types";
 import tramstops from "../../content/tramstops.json";
 import AddFave from "./addFave";
 
-const TramStopSelect = ({ handleSearch }) => {
+const TramStopSelect = ({ handleSearch, user, profile }) => {
   const [station, setStation] = useState("Select Station");
   const handleSelectStation = async (event) => {
     setStation(event.target.value);
@@ -37,7 +37,7 @@ const TramStopSelect = ({ handleSearch }) => {
           Search Station
         </button>
       </form>
-      <AddFave station={station} />
+      <AddFave station={station} user={user} profile={profile} />
     </div>
   );
 };

@@ -13,12 +13,12 @@ const Navbar = ({ user, profile, login, logOut }) => {
         <li className="navbar-links-item">
           <Link to="/tram-map">Tram Map</Link>
         </li>
-        <li className="navbar-links-item">
+        {/* <li className="navbar-links-item">
           <Link to="/login-page">Login/Signup</Link>
         </li>
         <li className="navbar-links-item">
           <Link to="/user-page">Profile</Link>
-        </li>
+        </li> */}
         <li>
           {profile ? (
             <div>

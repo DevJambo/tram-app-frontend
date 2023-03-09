@@ -5,7 +5,7 @@ import TramStopSelect from "../blocks/tram-stop-select";
 import Results from "../blocks/results";
 import Favourites from "../blocks/favourites";
 
-const HomePage = () => {
+const HomePage = ({ user, profile }) => {
   const [tramData, setTramData] = useState([]);
 
   const getTramData = async (station) => {
@@ -21,9 +21,13 @@ const HomePage = () => {
         src="/images/metrolink-network-map-feb-2023.jpg"
         alt="Manchester Metrolink Tram Map"
       />
-      <TramStopSelect handleSearch={getTramData} />
+      <TramStopSelect
+        handleSearch={getTramData}
+        user={user}
+        profile={profile}
+      />
       <Results tramData={tramData} />
-      <Favourites />
+      <Favourites user={user} profile={profile} />
     </div>
   );
 };

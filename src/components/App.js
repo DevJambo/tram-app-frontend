@@ -3,10 +3,8 @@ import axios from "axios";
 import { Routes, Route } from "react-router-dom";
 import { googleLogout, useGoogleLogin } from "@react-oauth/google";
 import Navbar from "./blocks/navbar";
-import LoginPage from "./pages/login-page";
 import TramMap from "./pages/tram-map";
 import HomePage from "./pages/home";
-import UserPage from "./pages/user-page";
 import "../styles/App.css";
 
 const App = () => {
@@ -46,10 +44,8 @@ const App = () => {
     <div className="App">
       <Navbar user={user} profile={profile} login={login} logOut={logOut} />
       <Routes>
-        <Route path="/" element={<HomePage />} />
+        <Route path="/" element={<HomePage user={user} profile={profile} />} />
         <Route path="/tram-map" element={<TramMap />} />
-        <Route path="/login-page" element={<LoginPage />} />
-        <Route path="/user-page" element={<UserPage />} />
       </Routes>
     </div>
   );

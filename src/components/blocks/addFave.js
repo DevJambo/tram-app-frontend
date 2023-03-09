@@ -1,15 +1,16 @@
 import React, { useState } from "react";
 import axios from "axios";
 
-const AddFave = ({ station }) => {
+const AddFave = ({ station, user, profile }) => {
   const [fave, setFave] = useState("");
 
   const handleSubmit = (e) => {
     e.preventDefault();
     setFave(station);
     console.log(fave);
+    console.log(profile.email);
     axios.post("http://localhost:4000/insert", {
-      user: "james",
+      user: profile.email,
       Favourite: fave,
     });
   };
