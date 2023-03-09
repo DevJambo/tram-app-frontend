@@ -23,19 +23,18 @@ const Navbar = ({ user, profile, login, logOut }) => {
         <li className="navbar-links-item">
           <Link to="/user-page">Profile</Link>
         </li> */}
-        <li>
-          {profile ? (
-            <div>
-              <h3>User Logged in</h3>
-              <p>Name: {profile.name}</p>
-              <p>Email: {profile.email}</p>
-              <button onClick={logOut}>Log out</button>
-            </div>
-          ) : (
-            <button onClick={() => login()}>Sign in with Google 🚀 </button>
-          )}
-        </li>
       </ul>
+
+      {profile ? (
+        <div>
+          <h3>User Logged in</h3>
+          <p>Name: {profile.name}</p>
+          <p>Email: {profile.email}</p>
+          <button onClick={logOut}>Log out</button>
+        </div>
+      ) : (
+        <button onClick={() => login()}>Sign in with Google 🚀 </button>
+      )}
     </div>
   );
 };
