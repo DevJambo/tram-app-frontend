@@ -13,7 +13,7 @@ const Favourites = ({ user, profile }) => {
 
   useEffect(() => {
     axios
-      .get(process.env.REACT_APP_API_URL)
+      .get("http://localhost:4000/fetch")
       .then((res) => {
         setSavedFaves(res.data);
       })
