@@ -4,9 +4,13 @@
     border: 3px solid black;
     object-fit: cover;
 }
-/* .home-page {
-    background-image: url("https://cdn.pixabay.com/photo/2016/08/02/14/42/banner-1563543_960_720.jpg");
-    color: aliceblue;
+
+.home-page {
     height: 100%;
     font-size: 250%;
-} */
+}
+
+.home-header {
+    margin: 0;
+}
+

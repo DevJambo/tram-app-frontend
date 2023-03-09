@@ -1,6 +1,5 @@
 .Navbar {
-    background-color: lightgrey;
-    border-bottom: 5px solid black;
+    background-color: var(--navbar-background-color);
     display: flex;
     justify-content: space-evenly;
     flex-wrap: wrap;
@@ -21,3 +20,12 @@
     font-size: 25px;
     display: inline-block;
 }
+.navbar-links-item a {
+    text-decoration: none;
+    }
+.navbar-links-item a:link,.navbar-links-item a:visited {
+color: var(--navbar-link-color);
+}
+.navbar-links-item a:active,.navbar-links-item a:hover{
+    color: var(--navbar-active-link-color);
+    }
