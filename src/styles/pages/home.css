@@ -4,6 +4,7 @@
     border: 3px solid black;
     object-fit: cover;
 }
+
 .home-page {
     height: 100%;
     font-size: 250%;
@@ -12,3 +13,4 @@
 .home-header {
     margin: 0;
 }
+
