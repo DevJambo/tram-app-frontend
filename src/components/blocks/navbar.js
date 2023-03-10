@@ -9,12 +9,13 @@ const Navbar = ({ user, profile, login, logOut }) => {
       <ul className="navbar-links">
         <li className="navbar-links-item">
           <Link className="navbar-link" to="/">
-            Home
+            <img className="logo" src="/images/bee1.png" alt="bee logo" />
+            Tram-Bee
           </Link>
         </li>
         <li className="navbar-links-item">
           <Link className="navbar-link" to="/tram-map">
-            Tram Map
+            Map
           </Link>
         </li>
         {/* <li className="navbar-links-item">
