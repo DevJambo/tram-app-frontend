@@ -19,7 +19,7 @@ const Navbar = ({ user, profile, login, logOut }) => {
         </li>
         <li className="navbar-links-item">
           <Link className="navbar-link" to="/tram-map">
-            Map
+            Interactive Map
           </Link>
         </li>
         {/* <li className="navbar-links-item">
@@ -31,14 +31,12 @@ const Navbar = ({ user, profile, login, logOut }) => {
       </ul>
 
       {profile ? (
-        <div>
-          {/* <h3>User Logged in</h3> */}
+        <div className="google-login">
           <p className="user-name">{getInitials(profile)}</p>
-          {/* <p>Email: {profile.email}</p> */}
-          <button onClick={logOut}>Log out</button>
+          <button className="log-out-button" onClick={logOut}>Sign out</button>
         </div>
       ) : (
-        <button onClick={() => login()}>Sign in with Google 🚀 </button>
+        <button className="log-in-button" onClick={() => login()}>Sign in</button>
       )}
     </div>
   );

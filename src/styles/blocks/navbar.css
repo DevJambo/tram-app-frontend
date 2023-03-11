@@ -2,6 +2,7 @@
     background-color: var(--navbar-background-color);
     display: flex;
     justify-content: space-between;
+    align-items: center;
     flex-wrap: wrap;
     margin: 0;
     width: 100%;
@@ -10,17 +11,24 @@
 .navbar-links {
     margin: 0px;
     padding: 0px;
+    display: flex;
+    align-items: center;
 }
 
 .navbar-links-item {
     margin: 0px;
     padding: 20px;
+    padding-right: 90px;
     font-size: 25px;
     display: inline-block;
 }
 
 .navbar-links-item a {
     text-decoration: none;
+    font-size: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .navbar-links-item a:link,
@@ -40,5 +48,34 @@
 }
 
 .user-name {
-    color: aliceblue;
+    color: var(--color-black-1);
+    background-color: var(--color-brand-1);
+    border-radius: 60px;
+    height: 100px;
+    width: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 0px;
+}
+.log-out-button {
+    color: var(--color-black-1);
+    background-color: var(--color-brand-1);
+    border-radius: 60px;
+    height: 100px;
+    width: 100px;
+    font-weight: bold;
+}
+.log-in-button {
+    color: var(--color-black-1);
+    background-color: var(--color-brand-1);
+    border-radius: 60px;
+    height: 100px;
+    width: 100px;
+    font-weight: bold;
+}
+.google-login {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
 }

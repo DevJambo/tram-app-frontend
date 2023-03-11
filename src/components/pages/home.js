@@ -15,7 +15,7 @@ const HomePage = ({ user, profile }) => {
   };
   return (
     <div className="home-page">
-      <h2 className="home-header">Home Page</h2>
+      {/* <h2 className="home-header">Home Page</h2> */}
       <img
         className="tram-map"
         src="/images/metrolink-network-map-feb-2023.jpg"
