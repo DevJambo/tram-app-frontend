@@ -27,7 +27,7 @@ const HomePage = ({ user, profile }) => {
         profile={profile}
       />
       <Results tramData={tramData} />
-      <Favourites user={user} profile={profile} />
+      <Favourites user={user} profile={profile} handleSearch={getTramData} />
     </div>
   );
 };
