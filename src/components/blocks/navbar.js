@@ -4,6 +4,10 @@ import { Link } from "react-router-dom";
 import "../../styles/blocks/navbar.css";
 
 const Navbar = ({ user, profile, login, logOut }) => {
+  const getInitials = (profile) => {
+    const initials = profile.given_name[0] + profile.family_name[0];
+    return initials;
+  };
   return (
     <div className="Navbar">
       <ul className="navbar-links">
@@ -28,9 +32,9 @@ const Navbar = ({ user, profile, login, logOut }) => {
 
       {profile ? (
         <div>
-          <h3>User Logged in</h3>
-          <p>Name: {profile.name}</p>
-          <p>Email: {profile.email}</p>
+          {/* <h3>User Logged in</h3> */}
+          <p className="user-name">{getInitials(profile)}</p>
+          {/* <p>Email: {profile.email}</p> */}
           <button onClick={logOut}>Log out</button>
         </div>
       ) : (

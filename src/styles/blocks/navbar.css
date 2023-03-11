@@ -33,9 +33,12 @@
     color: var(--navbar-active-link-color);
 }
 .logo {
-    width: 100px;
-    height: 100px;
+    width: 80px;
+    height: 80px;
     background-color: var(--color-brand-1);
     border-radius: 60px;
-    
+}
+
+.user-name {
+    color: aliceblue;
 }
