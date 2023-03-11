@@ -4,11 +4,29 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
 const AddFave = ({ station, user, profile }) => {
-  const noStation = () => {
-    toast("Please select a station");
-  };
   const noUser = () => {
-    toast("Login to set a favourite");
+    toast.warn("Login to set a favourite", {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
+  const noStation = () => {
+    toast.warn("Please select a station", {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
   };
 
   const handleSubmit = (e) => {
