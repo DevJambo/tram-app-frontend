@@ -35,8 +35,18 @@ button 2 text color
 
 
 */
+
+
 :root {
-  --navbar-background-color: rgb(13, 13, 13);
-  --navbar-link-color: rgb(243, 243, 243);
-  --navbar-active-link-color: rgb(253, 175, 1);
+
+  /* Colors */
+  --color-black-1:rgb(13, 13, 13);
+  --color-white-1: rgb(243, 243, 243);
+  --color-brand-1: rgb(253, 175, 1);
+
+
+  /* Navigation */
+  --navbar-background-color: var(--color-black-1);
+  --navbar-link-color: var(--color-white-1);
+  --navbar-active-link-color: var(--color-brand-1);
 }

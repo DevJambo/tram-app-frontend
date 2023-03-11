@@ -4,17 +4,22 @@ import { Link } from "react-router-dom";
 import "../../styles/blocks/navbar.css";
 
 const Navbar = ({ user, profile, login, logOut }) => {
+  const getInitials = (profile) => {
+    const initials = profile.given_name[0] + profile.family_name[0];
+    return initials;
+  };
   return (
     <div className="Navbar">
       <ul className="navbar-links">
         <li className="navbar-links-item">
           <Link className="navbar-link" to="/">
-            Home
+            <img className="logo" src="/images/bee1.png" alt="bee logo" />
+            Tram-Bee
           </Link>
         </li>
         <li className="navbar-links-item">
           <Link className="navbar-link" to="/tram-map">
-            Tram Map
+            Map
           </Link>
         </li>
         {/* <li className="navbar-links-item">
@@ -23,19 +28,18 @@ const Navbar = ({ user, profile, login, logOut }) => {
         <li className="navbar-links-item">
           <Link to="/user-page">Profile</Link>
         </li> */}
-        <li>
-          {profile ? (
-            <div>
-              <h3>User Logged in</h3>
-              <p>Name: {profile.name}</p>
-              <p>Email: {profile.email}</p>
-              <button onClick={logOut}>Log out</button>
-            </div>
-          ) : (
-            <button onClick={() => login()}>Sign in with Google 🚀 </button>
-          )}
-        </li>
       </ul>
+
+      {profile ? (
+        <div>
+          {/* <h3>User Logged in</h3> */}
+          <p className="user-name">{getInitials(profile)}</p>
+          {/* <p>Email: {profile.email}</p> */}
+          <button onClick={logOut}>Log out</button>
+        </div>
+      ) : (
+        <button onClick={() => login()}>Sign in with Google 🚀 </button>
+      )}
     </div>
   );
 };

@@ -1,7 +1,7 @@
 .Navbar {
     background-color: var(--navbar-background-color);
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
     flex-wrap: wrap;
     margin: 0;
     width: 100%;
@@ -10,8 +10,6 @@
 .navbar-links {
     margin: 0px;
     padding: 0px;
-    display: flex;
-    justify-content: space-evenly;
 }
 
 .navbar-links-item {
@@ -20,12 +18,27 @@
     font-size: 25px;
     display: inline-block;
 }
+
 .navbar-links-item a {
     text-decoration: none;
-    }
-.navbar-links-item a:link,.navbar-links-item a:visited {
-color: var(--navbar-link-color);
 }
-.navbar-links-item a:active,.navbar-links-item a:hover{
+
+.navbar-links-item a:link,
+.navbar-links-item a:visited {
+    color: var(--navbar-link-color);
+}
+
+.navbar-links-item a:active,
+.navbar-links-item a:hover {
     color: var(--navbar-active-link-color);
-    }
+}
+.logo {
+    width: 80px;
+    height: 80px;
+    background-color: var(--color-brand-1);
+    border-radius: 60px;
+}
+
+.user-name {
+    color: aliceblue;
+}
