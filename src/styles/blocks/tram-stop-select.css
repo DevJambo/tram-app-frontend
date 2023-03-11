@@ -1,0 +1,21 @@
+.tram-select-component {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.tram-select-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.tram-select-form label {
+    display: flex;
+    justify-content: center;
+}
+.submit-button {
+    margin: 0;
+    padding: 0;
+}
+

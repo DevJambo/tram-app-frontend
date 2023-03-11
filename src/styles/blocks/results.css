@@ -1,6 +1,27 @@
- .resultsbox {
-    border: 3px solid white;
-    padding: 10px;
+.results-box-component {
+    display: flex;
+    justify-content: center;
+}
+
+.results-box {
+    border: 3px solid var(--color-black-1);
+    border-radius: 20px;
+    padding: 10px 28px;
     margin: 20px;
-    background-color: darkgrey;
+    background-color: var(--color-brand-1);
+    color: var(--color-black-1);
+    font-size: 20px;
+    width: 450px;
+}
+
+.results-box p {
+    margin: 0;
+}
+
+p.tram-destination {
+    margin-top: 30px;
+}
+
+p.tram-time {
+    margin-top: 10px;
 }

@@ -1,8 +1,10 @@
 .tram-map {
-    width: 100%;
+    width: calc(100% - 6px);
     aspect-ratio: 3 / 1;
-    border: 3px solid black;
-    object-fit: cover;
+    border: 3px solid var(--color-brand-1);
+    object-fit: contain;
+    margin: 0px;
+    padding: 0px;
 }
 
 .home-page {

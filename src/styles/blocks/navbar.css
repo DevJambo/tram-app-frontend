@@ -5,7 +5,8 @@
     align-items: center;
     flex-wrap: wrap;
     margin: 0;
-    width: 100%;
+    padding: 0 10px;
+    width: calc(100% - 20px);
 }
 
 .navbar-links {
@@ -33,46 +34,68 @@
 
 .navbar-links-item a:link,
 .navbar-links-item a:visited {
-    color: var(--navbar-link-color);
+    color: var(--navbar-active-link-color);
+    
 }
 
 .navbar-links-item a:active,
 .navbar-links-item a:hover {
-    color: var(--navbar-active-link-color);
+    color: var(--navbar-link-color);
 }
 .logo {
-    width: 80px;
-    height: 80px;
+    width: 90px;
+    height: 90px;
     background-color: var(--color-brand-1);
     border-radius: 60px;
+    margin-right: 5px;
 }
 
 .user-name {
     color: var(--color-black-1);
     background-color: var(--color-brand-1);
     border-radius: 60px;
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     display: flex;
     justify-content: center;
     align-items: center;
     margin: 0px;
+    font-size: 30px;
 }
 .log-out-button {
     color: var(--color-black-1);
     background-color: var(--color-brand-1);
     border-radius: 60px;
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     font-weight: bold;
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    border: solid 2px var(--color-brand-1);
+    margin-left: 4px;
+}
+
+.log-out-button:hover {
+    transition-duration: 0.4s;
+    background-color: var(--color-black-1);
+    color: var(--color-brand-1);
 }
 .log-in-button {
     color: var(--color-black-1);
     background-color: var(--color-brand-1);
     border-radius: 60px;
-    height: 100px;
-    width: 100px;
+    height: 90px;
+    width: 90px;
     font-weight: bold;
+    font-size: 20px;
+    font-family: 'Ubuntu', sans-serif;
+    border: solid 2px var(--color-brand-1);
+}
+
+.log-in-button:hover {
+    transition-duration: 0.4s;
+    background-color: var(--color-black-1);
+    color: var(--color-brand-1);
 }
 .google-login {
     display: flex;

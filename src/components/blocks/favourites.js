@@ -1,10 +1,11 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
 import AddFave from "./addFave";
+import "../../styles/blocks/favourites.css";
 
 const Favourites = ({ user, profile, handleSearch, station }) => {
   if (!user)
-    return <div className="login-msg">Please login to see favourites</div>;
+    return <div className="login-msg">Please sign in to see Favourites</div>;
 
   const initialState = {
     savedFaves: "",

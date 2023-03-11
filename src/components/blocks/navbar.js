@@ -14,7 +14,7 @@ const Navbar = ({ user, profile, login, logOut }) => {
         <li className="navbar-links-item">
           <Link className="navbar-link" to="/">
             <img className="logo" src="/images/bee1.png" alt="bee logo" />
-            Tram-Bee
+            TramBee
           </Link>
         </li>
         <li className="navbar-links-item">
