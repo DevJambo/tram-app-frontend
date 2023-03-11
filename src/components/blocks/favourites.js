@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import AddFave from "./addFave";
 
-const Favourites = ({ user, profile, handleSearch }) => {
+const Favourites = ({ user, profile, handleSearch, station }) => {
   if (!user)
     return <div className="login-msg">Please login to see favourites</div>;
 
@@ -15,8 +16,6 @@ const Favourites = ({ user, profile, handleSearch }) => {
   };
 
   useEffect(() => {
-    console.log(user);
-    console.log(profile);
     if (profile) {
       axios
         .get(`http://localhost:4000/fetch/${profile.email}`)
@@ -33,6 +32,13 @@ const Favourites = ({ user, profile, handleSearch }) => {
       <button className="searchFave" onClick={handleSubmit} type="submit">
         {savedFaves}
       </button>
+      <AddFave
+        station={station}
+        user={user}
+        profile={profile}
+        handleSearch={handleSearch}
+        setSavedFaves={setSavedFaves}
+      />
     </div>
   );
 };
