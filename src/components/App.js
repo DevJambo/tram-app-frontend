@@ -20,6 +20,7 @@ const App = () => {
   const logOut = () => {
     googleLogout();
     setProfile(null);
+    setUser(null);
   };
 
   useEffect(() => {
