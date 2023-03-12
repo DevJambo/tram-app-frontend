@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import PropTypes from "prop-types";
 import "../../styles/pages/home.css";
 import TramStopSelect from "../blocks/tram-stop-select";
 import Results from "../blocks/results";
