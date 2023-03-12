@@ -5,7 +5,7 @@ import "../../styles/pages/home.css";
 import TramStopSelect from "../blocks/tram-stop-select";
 import Results from "../blocks/results";
 
-const HomePage = ({ user, profile }) => {
+const HomePage = ({ user, profile, login }) => {
   const [tramData, setTramData] = useState([]);
 
   const getTramData = async (station) => {
@@ -25,6 +25,7 @@ const HomePage = ({ user, profile }) => {
         handleSearch={getTramData}
         user={user}
         profile={profile}
+        login={login}
       />
       {tramData.length ? <Results tramData={tramData} /> : null}
     </div>

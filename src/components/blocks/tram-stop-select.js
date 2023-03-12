@@ -2,10 +2,19 @@ import React, { useState } from "react";
 import PropTypes from "prop-types";
 import tramstops from "../../content/tramstops.json";
 import Favourites from "./favourites";
+import AddFave from "./addFave";
 import "../../styles/blocks/tram-stop-select.css";
+import "../../styles/elements/select.css";
+import "../../styles/elements/button.css";
 
-const TramStopSelect = ({ handleSearch, user, profile }) => {
+const TramStopSelect = ({ handleSearch, user, profile, login }) => {
   const [station, setStation] = useState("Select Station");
+
+  const initialState = {
+    savedFaves: "",
+  };
+  const [savedFaves, setSavedFaves] = useState(initialState.savedFaves);
+
   const handleSelectStation = async (event) => {
     setStation(event.target.value);
   };
@@ -15,9 +24,19 @@ const TramStopSelect = ({ handleSearch, user, profile }) => {
   };
   return (
     <div className="tram-select-component">
+      <Favourites
+        station={station}
+        handleSearch={handleSearch}
+        user={user}
+        profile={profile}
+        savedFaves={savedFaves}
+        setSavedFaves={setSavedFaves}
+        login={login}
+      />
       <form onSubmit={handleSubmit} className="tram-select-form">
-        <label htmlFor="tram-stop-select">
+        <label className="select-container" htmlFor="tram-stop-select">
           <select
+            className="select-1"
             id="tram-stop-select"
             name="tram-stop-select"
             value={station}
@@ -33,16 +52,19 @@ const TramStopSelect = ({ handleSearch, user, profile }) => {
             ;
           </select>
         </label>
-        <button className="submit-button" type="submit">
-          Search Station
+        <button className="submit-button button-1" type="submit">
+          Get Tram Times
         </button>
       </form>
-      <Favourites
-        station={station}
-        handleSearch={handleSearch}
-        user={user}
-        profile={profile}
-      />
+      {user && (
+        <AddFave
+          station={station}
+          user={user}
+          profile={profile}
+          handleSearch={handleSearch}
+          setSavedFaves={setSavedFaves}
+        />
+      )}
     </div>
   );
 };

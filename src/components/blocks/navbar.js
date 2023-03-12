@@ -36,7 +36,7 @@ const Navbar = ({ profile, login, logOut }) => {
           </button>
         </div>
       ) : (
-        <button className="log-in-button" onClick={() => login()} type="submit">
+        <button className="log-in-button" onClick={login} type="submit">
           Sign in
         </button>
       )}

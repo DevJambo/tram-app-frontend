@@ -1,11 +1,19 @@
 .login-msg {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    font-size: 20px;
-    background-color: var(--color-black-1);
-    color: var(--color-brand-1);
-    width: fit-content;
-    padding: 10px;
-    margin: 10px;
+    margin-bottom: 20px;
+}
+
+.favourites {
+  background-image: url("../../../public/images/honeycomb4.jpg"); 
+  background-size: cover;
+  border: 3px solid var(--color-black-1);
+  border-radius: 30px;
+  padding: 20px 28px;
+  margin-bottom: 20px;
+  width: 100%;
+  max-width: 550px;
+  display: flex;
+  justify-content: center;
+}
+.favourite-header {
+    font-size: 28px;
 }
