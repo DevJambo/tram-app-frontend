@@ -6,8 +6,8 @@ import GoogleMap from "../blocks/googleMap";
 
 const TramMap = () => {
   return (
-    <div>
-      <h2 className="map-header">Interactive Map</h2>
+    <div className="map-page">
+      <h2 className="map-header">Interactive Tram Line Map</h2>
       <GoogleMap />
     </div>
   );
