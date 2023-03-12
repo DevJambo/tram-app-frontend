@@ -25,9 +25,11 @@ const HomePage = ({ user, profile }) => {
         user={user}
         profile={profile}
       />
-      <Results tramData={tramData} />
+      {tramData.length ? <Results tramData={tramData} /> : null}
     </div>
   );
 };
+
+//       <Results tramData={tramData} />
 
 export default HomePage;

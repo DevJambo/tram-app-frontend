@@ -1,0 +1,11 @@
+.login-msg {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    font-size: 20px;
+    background-color: var(--color-black-1);
+    color: var(--color-brand-1);
+    width: fit-content;
+    padding: 10px;
+    margin: 10px;
+}
