@@ -9,7 +9,6 @@ const Results = ({ tramData }) => {
   // }
   const incomingTrams = tramData[0] ? tramData[0] : [];
   const departingTrams = tramData[1] ? tramData[1] : [];
-  console.log(tramData);
   return (
     <div className="results-box-component">
       <div className="results-box">

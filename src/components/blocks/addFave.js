@@ -30,6 +30,7 @@ const AddFave = ({ station, profile, setSavedFaves }) => {
     });
   };
 
+  // eslint-disable-next-line consistent-return
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!profile) {
@@ -43,7 +44,8 @@ const AddFave = ({ station, profile, setSavedFaves }) => {
         user: profile.email,
         Favourite: station,
       })
-      .then(setSavedFaves(station));
+      .then(setSavedFaves(station))
+      .catch((err) => console.log(err));
   };
   return (
     <div>
@@ -56,9 +58,15 @@ const AddFave = ({ station, profile, setSavedFaves }) => {
 };
 
 AddFave.propTypes = {
-  profile: PropTypes.string.isRequired,
   setSavedFaves: PropTypes.func.isRequired,
   station: PropTypes.string.isRequired,
+  profile: PropTypes.shape({
+    email: PropTypes.string,
+  }),
+};
+
+AddFave.defaultProps = {
+  profile: null,
 };
 
 export default AddFave;

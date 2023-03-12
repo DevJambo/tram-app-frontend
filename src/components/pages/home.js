@@ -31,6 +31,18 @@ const HomePage = ({ user, profile }) => {
   );
 };
 
-//       <Results tramData={tramData} />
+HomePage.propTypes = {
+  user: PropTypes.shape({
+    access_token: PropTypes.string,
+  }),
+  profile: PropTypes.shape({
+    email: PropTypes.string,
+  }),
+};
+
+HomePage.defaultProps = {
+  profile: null,
+  user: null,
+};
 
 export default HomePage;

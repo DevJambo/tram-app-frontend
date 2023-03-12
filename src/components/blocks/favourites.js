@@ -46,10 +46,19 @@ const Favourites = ({ user, profile, handleSearch, station }) => {
 };
 
 Favourites.propTypes = {
-  profile: PropTypes.string.isRequired,
   handleSearch: PropTypes.func.isRequired,
   station: PropTypes.string.isRequired,
-  user: PropTypes.string.isRequired,
+  user: PropTypes.shape({
+    access_token: PropTypes.string,
+  }),
+  profile: PropTypes.shape({
+    email: PropTypes.string,
+  }),
+};
+
+Favourites.defaultProps = {
+  profile: null,
+  user: null,
 };
 
 export default Favourites;

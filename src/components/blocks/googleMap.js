@@ -8,7 +8,7 @@ const GoogleMap = () => {
         width="1640"
         height="1280"
         style={{ border: "0" }}
-        allowfullscreen=""
+        allowfullscreen
         loading="lazy"
         title="map"
       />

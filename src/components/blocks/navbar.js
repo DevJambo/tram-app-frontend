@@ -41,9 +41,16 @@ const Navbar = ({ profile, login, logOut }) => {
 };
 
 Navbar.propTypes = {
-  profile: PropTypes.string.isRequired,
   login: PropTypes.func.isRequired,
   logOut: PropTypes.func.isRequired,
+  profile: PropTypes.shape({
+    given_name: PropTypes.string,
+    family_name: PropTypes.string,
+  }),
+};
+
+Navbar.defaultProps = {
+  profile: null,
 };
 
 export default Navbar;

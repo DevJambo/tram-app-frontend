@@ -49,8 +49,17 @@ const TramStopSelect = ({ handleSearch, user, profile }) => {
 
 TramStopSelect.propTypes = {
   handleSearch: PropTypes.func.isRequired,
-  user: PropTypes.string.isRequired,
-  profile: PropTypes.string.isRequired,
+  user: PropTypes.shape({
+    access_token: PropTypes.string,
+  }),
+  profile: PropTypes.shape({
+    email: PropTypes.string,
+  }),
+};
+
+TramStopSelect.defaultProps = {
+  profile: null,
+  user: null,
 };
 
 export default TramStopSelect;
