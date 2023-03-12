@@ -1,10 +1,10 @@
 import React from "react";
 import { Link } from "react-router-dom";
-// import LoginPage from "../pages/login-page";
+import PropTypes from "prop-types";
 import "../../styles/blocks/navbar.css";
 
-const Navbar = ({ user, profile, login, logOut }) => {
-  const getInitials = (profile) => {
+const Navbar = ({ profile, login, logOut }) => {
+  const getInitials = () => {
     const initials = profile.given_name[0] + profile.family_name[0];
     return initials;
   };
@@ -17,29 +17,37 @@ const Navbar = ({ user, profile, login, logOut }) => {
             TramBee
           </Link>
         </li>
-        <li className="navbar-links-item">
+        <li className="navbar-links-item map-box">
           <Link className="navbar-link" to="/tram-map">
-            Interactive Map
+            <img
+              className="map-logo"
+              src="/images/maplogo3.png"
+              alt="Interactive Map logo"
+            />
           </Link>
         </li>
-        {/* <li className="navbar-links-item">
-          <Link to="/login-page">Login/Signup</Link>
-        </li>
-        <li className="navbar-links-item">
-          <Link to="/user-page">Profile</Link>
-        </li> */}
       </ul>
 
       {profile ? (
         <div className="google-login">
           <p className="user-name">{getInitials(profile)}</p>
-          <button className="log-out-button" onClick={logOut}>Sign out</button>
+          <button className="log-out-button" onClick={logOut} type="submit">
+            Sign out
+          </button>
         </div>
       ) : (
-        <button className="log-in-button" onClick={() => login()}>Sign in</button>
+        <button className="log-in-button" onClick={() => login()} type="submit">
+          Sign in
+        </button>
       )}
     </div>
   );
+};
+
+Navbar.propTypes = {
+  profile: PropTypes.string.isRequired,
+  login: PropTypes.func.isRequired,
+  logOut: PropTypes.func.isRequired,
 };
 
 export default Navbar;

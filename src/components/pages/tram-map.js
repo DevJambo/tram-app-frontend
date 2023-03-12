@@ -7,14 +7,7 @@ import GoogleMap from "../blocks/googleMap";
 const TramMap = () => {
   return (
     <div>
-      <h2 className="map-header">Tram Map Page</h2>
-      {/* <img
-        className="tram-page-map"
-        src="/images/metrolink-network-map-feb-2023.jpg"
-        alt="Manchester Metrolink Tram Map"
-      /> */}
-      {/* <TramStopSelect />
-      <Results /> */}
+      <h2 className="map-header">Interactive Map</h2>
       <GoogleMap />
     </div>
   );
