@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
 import axios from "axios";
+import PropTypes from "prop-types";
 import AddFave from "./addFave";
 import "../../styles/blocks/favourites.css";
 
@@ -42,6 +43,13 @@ const Favourites = ({ user, profile, handleSearch, station }) => {
       />
     </div>
   );
+};
+
+Favourites.propTypes = {
+  profile: PropTypes.string.isRequired,
+  handleSearch: PropTypes.func.isRequired,
+  station: PropTypes.string.isRequired,
+  user: PropTypes.string.isRequired,
 };
 
 export default Favourites;

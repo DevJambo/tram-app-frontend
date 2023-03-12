@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import tramstops from "../../content/tramstops.json";
-import AddFave from "./addFave";
 import Favourites from "./favourites";
 import "../../styles/blocks/tram-stop-select.css";
 
@@ -50,6 +49,8 @@ const TramStopSelect = ({ handleSearch, user, profile }) => {
 
 TramStopSelect.propTypes = {
   handleSearch: PropTypes.func.isRequired,
+  user: PropTypes.string.isRequired,
+  profile: PropTypes.string.isRequired,
 };
 
 export default TramStopSelect;

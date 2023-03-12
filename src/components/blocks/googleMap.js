@@ -10,7 +10,8 @@ const GoogleMap = () => {
         style={{ border: "0" }}
         allowfullscreen=""
         loading="lazy"
-      ></iframe>
+        title="map"
+      />
     </div>
   );
 };

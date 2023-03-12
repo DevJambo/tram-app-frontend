@@ -1,9 +1,10 @@
 import React from "react";
 import axios from "axios";
 import { ToastContainer, toast } from "react-toastify";
+import PropTypes from "prop-types";
 import "react-toastify/dist/ReactToastify.css";
 
-const AddFave = ({ station, user, profile, handleSearch, setSavedFaves }) => {
+const AddFave = ({ station, profile, setSavedFaves }) => {
   const noUser = () => {
     toast.warn("Login to set a favourite", {
       position: "top-center",
@@ -52,6 +53,12 @@ const AddFave = ({ station, user, profile, handleSearch, setSavedFaves }) => {
       <ToastContainer />
     </div>
   );
+};
+
+AddFave.propTypes = {
+  profile: PropTypes.string.isRequired,
+  setSavedFaves: PropTypes.func.isRequired,
+  station: PropTypes.string.isRequired,
 };
 
 export default AddFave;
