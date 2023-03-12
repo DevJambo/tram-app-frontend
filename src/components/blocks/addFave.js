@@ -30,7 +30,6 @@ const AddFave = ({ station, profile, setSavedFaves }) => {
     });
   };
 
-  // eslint-disable-next-line consistent-return
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!profile) {
@@ -47,6 +46,7 @@ const AddFave = ({ station, profile, setSavedFaves }) => {
       .then(setSavedFaves(station))
       .catch((err) => console.log(err));
   };
+
   return (
     <div>
       <form onSubmit={handleSubmit}>

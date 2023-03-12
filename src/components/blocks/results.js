@@ -1,12 +1,13 @@
 import React from "react";
+import PropTypes from "prop-types";
+import ServiceUpdates from "./serviceUpdates";
 import "../../styles/blocks/results.css";
 
-// eslint-disable-next-line react/prop-types
 const Results = ({ tramData }) => {
   // console.log(tramData[0]);
-  // if (tramData[0]) {
-  //   console.log(tramData[0].Line);
-  // }
+  if (tramData[0]) {
+    console.log(tramData[0]);
+  }
   const incomingTrams = tramData[0] ? tramData[0] : [];
   const departingTrams = tramData[1] ? tramData[1] : [];
   return (
@@ -61,9 +62,16 @@ const Results = ({ tramData }) => {
             ? `Time: ${departingTrams.Wait1} mins`
             : ``}
         </p>
+        <ServiceUpdates tramData={tramData} />
       </div>
     </div>
   );
+};
+
+Results.propTypes = {
+  tramData: PropTypes.shape({
+    line: PropTypes.string,
+  }).isRequired,
 };
 
 export default Results;
