@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import axios from "axios";
 import { Routes, Route } from "react-router-dom";
 import { googleLogout, useGoogleLogin } from "@react-oauth/google";
+import { useCookies } from "react-cookie";
 import Navbar from "./blocks/navbar";
 import TramMap from "./pages/tram-map";
 import HomePage from "./pages/home";
@@ -11,6 +12,7 @@ import "../styles/App.css";
 const App = () => {
   const [user, setUser] = useState(null);
   const [profile, setProfile] = useState(null);
+  const [cookie, setCookie, removeCookie] = useCookies(["user"]);
 
   const login = useGoogleLogin({
     onSuccess: (codeResponse) => setUser(codeResponse),
@@ -25,18 +27,12 @@ const App = () => {
 
   useEffect(() => {
     if (user) {
+      const token = user.access_token;
       axios
-        .get(
-          `https://www.googleapis.com/oauth2/v1/userinfo?access_token=${user.access_token}`,
-          {
-            headers: {
-              Authorization: `Bearer ${user.access_token}`,
-              Accept: "application/json",
-            },
-          }
-        )
+        .get(`${process.env.REACT_APP_API_URL}/login/${token}`)
         .then((res) => {
           setProfile(res.data);
+          setCookie("user", user.access_token, { path: "/" });
         })
         .catch((err) => console.log(err));
     }
