@@ -37,7 +37,7 @@ button 2 text color
 */
 body {
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),  url("../../public/images/honeycomb3.jpg"); 
-  object-fit: contain;
+  background-size: cover;
 }
 
 :root {

@@ -17,9 +17,13 @@ const Navbar = ({ profile, login, logOut }) => {
             TramBee
           </Link>
         </li>
-        <li className="navbar-links-item">
+        <li className="navbar-links-item map-box">
           <Link className="navbar-link" to="/tram-map">
-            Interactive Map
+            <img
+              className="map-logo"
+              src="/images/maplogo3.png"
+              alt="Interactive Map logo"
+            />
           </Link>
         </li>
       </ul>
