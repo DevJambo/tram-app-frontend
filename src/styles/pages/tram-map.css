@@ -1,11 +1,16 @@
-.tram-page-map {
-    /* display: flex;
-    margin: 0;
-    /* flex-wrap: nowrap; */
-    
-    height: 100%;
+.googlemap {
     width: 100%;
-    border: 3px solid black;
-    /* overflow: auto; */
-    
+}
+.map-header {
+    font-size: 28px;
+    background-color: var(--color-brand-1);
+    border: 3px solid var(--color-black-1);
+    width: fit-content;
+    padding: 10px;
+}
+.map-page {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }

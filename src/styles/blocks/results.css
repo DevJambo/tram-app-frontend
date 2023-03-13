@@ -6,12 +6,17 @@
 .results-box {
     border: 3px solid var(--color-black-1);
     border-radius: 20px;
-    padding: 10px 28px;
+    padding: 20px 28px;
     margin: 20px;
     background-color: var(--color-brand-1);
     color: var(--color-black-1);
     font-size: 20px;
-    width: 450px;
+    width: 100%;
+    max-width: 550px;
+}
+
+.results-box h3 {
+    margin-top: 0;
 }
 
 .results-box p {

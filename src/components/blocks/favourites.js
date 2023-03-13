@@ -4,14 +4,23 @@ import PropTypes from "prop-types";
 import AddFave from "./addFave";
 import "../../styles/blocks/favourites.css";
 
-const Favourites = ({ user, profile, handleSearch, station }) => {
+const Favourites = ({
+  user,
+  profile,
+  handleSearch,
+  station,
+  savedFaves,
+  setSavedFaves,
+  login,
+}) => {
   if (!user)
-    return <div className="login-msg">Please sign in to see Favourites</div>;
+    // return <div className="login-msg">Please sign in to see Favourites</div>;
+    return (
+      <button className="button-2 login-msg" onClick={login} type="submit">
+        Please sign in to see Favourites
+      </button>
+    );
 
-  const initialState = {
-    savedFaves: "",
-  };
-  const [savedFaves, setSavedFaves] = useState(initialState.savedFaves);
   const handleSubmit = (event) => {
     handleSearch(savedFaves);
     event.preventDefault();
@@ -30,17 +39,16 @@ const Favourites = ({ user, profile, handleSearch, station }) => {
 
   return (
     <div className="favourites">
-      <h2>Favourites</h2>
-      <button className="searchFave" onClick={handleSubmit} type="submit">
-        {savedFaves}
+      <h2 className="favourite-header">
+        Your Favourite Tram Stop is {savedFaves}
+      </h2>
+      <button
+        className="searchFave button-2"
+        onClick={handleSubmit}
+        type="submit"
+      >
+        View times for {savedFaves}
       </button>
-      <AddFave
-        station={station}
-        user={user}
-        profile={profile}
-        handleSearch={handleSearch}
-        setSavedFaves={setSavedFaves}
-      />
     </div>
   );
 };

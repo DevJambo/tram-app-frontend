@@ -50,7 +50,7 @@ const AddFave = ({ station, profile, setSavedFaves }) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <button type="submit">Favourites</button>
+        <button className="button-1" type="submit">Favourite this Stop</button>
       </form>
       <ToastContainer />
     </div>

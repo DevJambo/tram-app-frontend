@@ -55,7 +55,10 @@ const App = () => {
     <div className="App">
       <Navbar user={user} profile={profile} login={login} logOut={logOut} />
       <Routes>
-        <Route path="/" element={<HomePage user={user} profile={profile} />} />
+        <Route
+          path="/"
+          element={<HomePage user={user} profile={profile} login={login} />}
+        />
         <Route path="/tram-map" element={<TramMap />} />
       </Routes>
     </div>
