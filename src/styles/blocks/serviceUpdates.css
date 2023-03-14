@@ -4,9 +4,10 @@
 
 .services {
     font-family: 'Ubuntu', sans-serif;
-    border: none;
-    background-color: var(--color-brand-1);
+    /* border: none; */
     font-size: larger;
+    margin-top: 15px;
+    margin-bottom: 20px;
 }
 
 .services:hover {
