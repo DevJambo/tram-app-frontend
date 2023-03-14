@@ -19,10 +19,20 @@ const TramStopSelect = ({ handleSearch, user, profile, login }) => {
     setStation(event.target.value);
   };
 
+  // const scrollWin = () => {
+  //   console.log(station);
+  //   window.scrollTo({
+  //     top: 1000,
+  //     behavior: "smooth",
+  //   });
+  // };
+
   const handleSubmit = (event) => {
-    handleSearch(station);
     event.preventDefault();
+    handleSearch(station);
+    // scrollWin();
   };
+
   return (
     <div className="tram-select-component">
       <Favourites

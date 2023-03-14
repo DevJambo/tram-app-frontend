@@ -1,18 +1,19 @@
-import React from "react";
+import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "../../styles/blocks/serviceUpdates.css";
 import "../../styles/elements/button.css";
 
 const ServiceUpdates = ({ tramData }) => {
+  const [messageHidden, setMessageHidden] = useState(true);
+
   const incomingTrams = tramData[0] ? tramData[0] : [];
-  const renderMessages = async () => {
+  const renderMessages = () => {
     console.log(incomingTrams.MessageBoard);
-    const mssg = await document.getElementById("message");
-    const toggle =
-      incomingTrams && mssg.style.display === "none"
-        ? (mssg.style.display = "block")
-        : (mssg.style.display = "none");
-    return toggle;
+    if (incomingTrams && messageHidden) {
+      setMessageHidden(false);
+    } else {
+      setMessageHidden(true);
+    }
   };
   return (
     <div className="service-message">
@@ -25,9 +26,7 @@ const ServiceUpdates = ({ tramData }) => {
       </button>
       <br />
       <p id="message">
-        {incomingTrams && incomingTrams.MessageBoard
-          ? `${incomingTrams.MessageBoard}.`
-          : ``}
+        {incomingTrams && !messageHidden ? `${incomingTrams.MessageBoard}` : ``}
       </p>
     </div>
   );

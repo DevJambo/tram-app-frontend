@@ -8,21 +8,22 @@ import Results from "../blocks/results";
 const HomePage = ({ user, profile, login }) => {
   const [tramData, setTramData] = useState([]);
 
-  const scrollWin = async () => {
-    if (tramData) {
-      window.scrollTo(0, 500);
-    }
+  const scrollWin = () => {
+    // console.log(station);
+    window.scrollTo({
+      top: 1000,
+      behavior: "smooth",
+    });
   };
 
   const getTramData = async (station) => {
     const { REACT_APP_API_URL } = process.env;
     const response = await axios.get(`${REACT_APP_API_URL}?station=${station}`);
-    await setTramData(response.data);
+    setTramData(response.data);
     scrollWin();
   };
   return (
     <div className="home-page">
-      {/* <h2 className="home-header">Home Page</h2> */}
       <img
         className="tram-map"
         src="/images/metrolink-network-map-feb-2023.jpg"
