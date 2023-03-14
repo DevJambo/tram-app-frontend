@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import PropTypes from "prop-types";
 import "../../styles/blocks/serviceUpdates.css";
+import "../../styles/elements/button.css";
 
 const ServiceUpdates = ({ tramData }) => {
   const [messageHidden, setMessageHidden] = useState(true);
@@ -16,9 +17,14 @@ const ServiceUpdates = ({ tramData }) => {
   };
   return (
     <div className="service-message">
-      <button className="services" onClick={renderMessages} type="button">
-        Click for Service Updates&#8681;
+      <button
+        className="services button-1"
+        onClick={renderMessages}
+        type="button"
+      >
+        Service Updates&#8681;
       </button>
+      <br />
       <p id="message">
         {incomingTrams && !messageHidden ? `${incomingTrams.MessageBoard}` : ``}
       </p>

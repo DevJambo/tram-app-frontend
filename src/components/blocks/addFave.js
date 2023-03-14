@@ -29,16 +29,8 @@ const AddFave = ({ station, profile, setSavedFaves }) => {
       theme: "light",
     });
   };
-
-  const handleSubmit = (e) => {
+  const postFavourite = () => {
     const { REACT_APP_API_URL } = process.env;
-    e.preventDefault();
-    if (!profile) {
-      return noUser();
-    }
-    if (station === "Select Tram Stop") {
-      return noStation();
-    }
     axios
       .post(`${REACT_APP_API_URL}/insert`, {
         user: profile.email,
@@ -46,6 +38,17 @@ const AddFave = ({ station, profile, setSavedFaves }) => {
       })
       .then(setSavedFaves(station))
       .catch((err) => console.log(err));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    if (!profile) {
+      return noUser();
+    }
+    if (station === "Select Tram Stop") {
+      return noStation();
+    }
+    return postFavourite;
   };
 
   return (
