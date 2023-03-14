@@ -8,7 +8,9 @@ const TramMap = () => {
   return (
     <div className="map-page">
       <h2 className="map-header">Interactive Tram Line Map</h2>
-      <GoogleMap />
+      <div className="map-container">
+        <GoogleMap />
+      </div>
     </div>
   );
 };

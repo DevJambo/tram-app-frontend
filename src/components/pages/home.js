@@ -8,10 +8,17 @@ import Results from "../blocks/results";
 const HomePage = ({ user, profile, login }) => {
   const [tramData, setTramData] = useState([]);
 
+  const scrollWin = async () => {
+    if (tramData) {
+      window.scrollTo(0, 500);
+    }
+  };
+
   const getTramData = async (station) => {
     const { REACT_APP_API_URL } = process.env;
     const response = await axios.get(`${REACT_APP_API_URL}?station=${station}`);
     await setTramData(response.data);
+    scrollWin();
   };
   return (
     <div className="home-page">

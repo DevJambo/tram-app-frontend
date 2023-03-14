@@ -18,6 +18,7 @@ const TramStopSelect = ({ handleSearch, user, profile, login }) => {
   const handleSelectStation = async (event) => {
     setStation(event.target.value);
   };
+
   const handleSubmit = (event) => {
     handleSearch(station);
     event.preventDefault();

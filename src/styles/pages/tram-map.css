@@ -1,5 +1,7 @@
 .googlemap {
+    height: 100%;
     width: 100%;
+    border: 2px solid blue;
 }
 .map-header {
     font-size: 28px;
@@ -13,4 +15,11 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    height: 80vh;
+}
+
+.map-container {
+    height: 100%;
+    width: 100vh;
+    border: 2px solid red;
 }

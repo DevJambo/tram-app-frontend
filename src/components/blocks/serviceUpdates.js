@@ -4,13 +4,14 @@ import "../../styles/blocks/serviceUpdates.css";
 
 const ServiceUpdates = ({ tramData }) => {
   const incomingTrams = tramData[0] ? tramData[0] : [];
-  const renderMessages = () => {
-    const mssg = document.getElementById("message");
-    if (mssg.style.display === "none") {
-      mssg.style.display = "block";
-    } else {
-      mssg.style.display = "none";
-    }
+  const renderMessages = async () => {
+    console.log(incomingTrams.MessageBoard);
+    const mssg = await document.getElementById("message");
+    const toggle =
+      incomingTrams && mssg.style.display === "none"
+        ? (mssg.style.display = "block")
+        : (mssg.style.display = "none");
+    return toggle;
   };
   return (
     <div className="service-message">
