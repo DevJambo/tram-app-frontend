@@ -69,9 +69,8 @@ const Results = ({ tramData }) => {
 };
 
 Results.propTypes = {
-  tramData: PropTypes.shape({
-    line: PropTypes.string,
-  }).isRequired,
+  tramData: PropTypes.arrayOf(PropTypes.shape({ wait: PropTypes.number }))
+    .isRequired,
 };
 
 export default Results;

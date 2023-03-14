@@ -33,9 +33,8 @@ const ServiceUpdates = ({ tramData }) => {
 };
 
 ServiceUpdates.propTypes = {
-  tramData: PropTypes.shape({
-    line: PropTypes.string,
-  }).isRequired,
+  tramData: PropTypes.arrayOf(PropTypes.shape({ wait: PropTypes.number }))
+    .isRequired,
 };
 
 export default ServiceUpdates;
