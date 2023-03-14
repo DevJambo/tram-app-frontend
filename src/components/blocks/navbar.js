@@ -26,20 +26,21 @@ const Navbar = ({ profile, login, logOut }) => {
             />
           </Link>
         </li>
+        <li>
+          {profile ? (
+            <div className="google-login">
+              <p className="user-name">{getInitials(profile)}</p>
+              <button className="log-out-button" onClick={logOut} type="submit">
+                Sign out
+              </button>
+            </div>
+          ) : (
+            <button className="log-in-button" onClick={login} type="submit">
+              Sign in
+            </button>
+          )}
+        </li>
       </ul>
-
-      {profile ? (
-        <div className="google-login">
-          <p className="user-name">{getInitials(profile)}</p>
-          <button className="log-out-button" onClick={logOut} type="submit">
-            Sign out
-          </button>
-        </div>
-      ) : (
-        <button className="log-in-button" onClick={login} type="submit">
-          Sign in
-        </button>
-      )}
     </div>
   );
 };
