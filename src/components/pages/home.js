@@ -33,6 +33,7 @@ const HomePage = ({ user, profile, login }) => {
 };
 
 HomePage.propTypes = {
+  login: PropTypes.func.isRequired,
   user: PropTypes.shape({
     access_token: PropTypes.string,
   }),

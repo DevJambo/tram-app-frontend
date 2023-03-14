@@ -71,6 +71,7 @@ const TramStopSelect = ({ handleSearch, user, profile, login }) => {
 
 TramStopSelect.propTypes = {
   handleSearch: PropTypes.func.isRequired,
+  login: PropTypes.func.isRequired,
   user: PropTypes.shape({
     access_token: PropTypes.string,
   }),

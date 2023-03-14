@@ -31,6 +31,7 @@ const AddFave = ({ station, profile, setSavedFaves }) => {
   };
 
   const handleSubmit = (e) => {
+    const { REACT_APP_API_URL } = process.env;
     e.preventDefault();
     if (!profile) {
       return noUser();
@@ -39,7 +40,7 @@ const AddFave = ({ station, profile, setSavedFaves }) => {
       return noStation();
     }
     axios
-      .post("http://localhost:4000/insert", {
+      .post(`${REACT_APP_API_URL}/insert`, {
         user: profile.email,
         Favourite: station,
       })
@@ -50,7 +51,9 @@ const AddFave = ({ station, profile, setSavedFaves }) => {
   return (
     <div>
       <form onSubmit={handleSubmit}>
-        <button className="button-1" type="submit">Favourite this Stop</button>
+        <button className="button-1" type="submit">
+          Favourite this Stop
+        </button>
       </form>
       <ToastContainer />
     </div>

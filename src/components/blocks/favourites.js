@@ -1,14 +1,12 @@
-import React, { useState, useEffect } from "react";
+import React, { useEffect } from "react";
 import axios from "axios";
 import PropTypes from "prop-types";
-import AddFave from "./addFave";
 import "../../styles/blocks/favourites.css";
 
 const Favourites = ({
   user,
   profile,
   handleSearch,
-  station,
   savedFaves,
   setSavedFaves,
   login,
@@ -55,7 +53,9 @@ const Favourites = ({
 
 Favourites.propTypes = {
   handleSearch: PropTypes.func.isRequired,
-  station: PropTypes.string.isRequired,
+  savedFaves: PropTypes.string.isRequired,
+  setSavedFaves: PropTypes.func.isRequired,
+  login: PropTypes.func.isRequired,
   user: PropTypes.shape({
     access_token: PropTypes.string,
   }),
