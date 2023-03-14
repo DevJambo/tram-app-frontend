@@ -19,4 +19,10 @@
     padding: 0;
 }
 
+@media screen and (max-width: 520px) {
+    .tram-select-form {
+        flex-direction: column;
+    }
+}
+
 
