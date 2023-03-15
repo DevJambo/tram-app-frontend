@@ -8,6 +8,7 @@ import jwtDecode from "jwt-decode";
 import Navbar from "./blocks/navbar";
 import TramMap from "./pages/tram-map";
 import HomePage from "./pages/home";
+import Footer from "./blocks/footer";
 import "../styles/global.css";
 import "../styles/App.css";
 
@@ -61,6 +62,7 @@ const App = () => {
         />
         <Route path="/tram-map" element={<TramMap />} />
       </Routes>
+      {/* <Footer /> */}
     </div>
   );
 };

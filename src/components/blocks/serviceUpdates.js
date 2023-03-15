@@ -7,12 +7,21 @@ const ServiceUpdates = ({ tramData }) => {
   const [messageHidden, setMessageHidden] = useState(true);
 
   const incomingTrams = tramData[0] ? tramData[0] : [];
+  const windowScroll = () => {
+    console.log(messageHidden);
+    window.scrollTo({
+      top: 2000,
+      behavior: "smooth",
+    });
+  };
   const renderMessages = () => {
-    console.log(incomingTrams.MessageBoard);
-    if (incomingTrams && messageHidden) {
-      setMessageHidden(false);
-    } else {
+    if (incomingTrams && !messageHidden) {
       setMessageHidden(true);
+    } else {
+      setMessageHidden(false);
+      if (messageHidden) {
+        windowScroll();
+      }
     }
   };
   return (
