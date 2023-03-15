@@ -48,7 +48,7 @@ const AddFave = ({ station, profile, setSavedFaves }) => {
     if (station === "Select Tram Stop") {
       return noStation();
     }
-    return postFavourite;
+    return postFavourite();
   };
 
   return (
