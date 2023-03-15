@@ -26,7 +26,7 @@ const Navbar = ({ profile, login, logOut }) => {
             />
           </Link>
         </li>
-        <li>
+        <li className="navbar-login">
           {profile ? (
             <div className="google-login">
               <p className="user-name">{getInitials(profile)}</p>

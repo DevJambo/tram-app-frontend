@@ -17,3 +17,16 @@
 .favourite-header {
     font-size: 28px;
 }
+
+@media screen and (max-width: 790px) {
+    .favourites {
+      max-width: calc(100vw - 80px);
+    }
+
+}
+
+@media screen and (max-width: 520px) {
+    .favourites {
+      flex-direction: column;
+    }
+}
