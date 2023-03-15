@@ -4,10 +4,22 @@ import ServiceUpdates from "./serviceUpdates";
 import "../../styles/blocks/results.css";
 
 const Results = ({ tramData }) => {
-  // console.log(tramData[0]);
-  if (tramData[0]) {
-    console.log(tramData[0]);
-  }
+  // const [showStatus, setShowStatus] = useState(false);
+  // // const [scrollWin, setScrollWin] = useState(false);
+  // const windowScroll = () => {
+  //   window.scrollTo({
+  //     top: 1000,
+  //     behavior: "smooth",
+  //   });
+  // };
+  // // };
+  // // setScrollWin(true);
+  // // if (scrollWin) {
+  // //   windowScroll();
+  // // } else {
+  // //   return scrollWin();
+  // // }
+
   const incomingTrams = tramData[0] ? tramData[0] : [];
   const departingTrams = tramData[1] ? tramData[1] : [];
   return (

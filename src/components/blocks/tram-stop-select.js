@@ -19,18 +19,19 @@ const TramStopSelect = ({ handleSearch, user, profile, login }) => {
     setStation(event.target.value);
   };
 
-  // const scrollWin = () => {
-  //   console.log(station);
-  //   window.scrollTo({
-  //     top: 1000,
-  //     behavior: "smooth",
-  //   });
-  // };
+  const windowScroll = () => {
+    window.scrollTo({
+      top: 1000,
+      behavior: "smooth",
+    });
+  };
 
   const handleSubmit = (event) => {
     event.preventDefault();
     handleSearch(station);
-    // scrollWin();
+    if (handleSearch(station)) {
+      windowScroll();
+    }
   };
 
   return (

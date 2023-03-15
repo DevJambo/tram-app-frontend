@@ -11,6 +11,13 @@ const Favourites = ({
   setSavedFaves,
   login,
 }) => {
+  const windowScroll = () => {
+    window.scrollTo({
+      top: 1000,
+      behavior: "smooth",
+    });
+  };
+
   if (!user)
     // return <div className="login-msg">Please sign in to see Favourites</div>;
     return (
@@ -22,6 +29,9 @@ const Favourites = ({
   const handleSubmit = (event) => {
     handleSearch(savedFaves);
     event.preventDefault();
+    if (handleSearch(savedFaves)) {
+      windowScroll();
+    }
   };
 
   useEffect(() => {
