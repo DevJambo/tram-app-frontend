@@ -23,6 +23,9 @@
     .tram-select-form {
         flex-direction: column;
     }
+    .submit-button {
+        margin-top: 5px;
+    }
 }
 
 

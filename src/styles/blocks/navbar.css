@@ -114,7 +114,7 @@ list-style-type: none;
     /* margin-left: 450px; */
 }
 
-.map-logo:hover {
+.map-logo:active {
     transition-duration: 0.4s;
     background-color: var(--color-white-1);
 }
