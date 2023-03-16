@@ -32,7 +32,6 @@ const ServiceUpdates = ({ tramData }) => {
       >
         Service Updates&#8681;
       </button>
-      <br />
       <p id="message">
         {incomingTrams && !messageHidden ? `${incomingTrams.MessageBoard}` : ``}
       </p>
