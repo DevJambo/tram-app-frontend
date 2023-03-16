@@ -24,11 +24,13 @@ const HomePage = ({ user, profile, login }) => {
   };
   return (
     <div className="home-page">
-      <img
-        className="tram-map"
-        src="/images/metrolink-network-map-feb-2023.jpg"
-        alt="Manchester Metrolink Tram Map"
-      />
+      <div className="tram-map-container">
+        <img
+          className="tram-map"
+          src="/images/metrolink-network-map-feb-2023.jpg"
+          alt="Manchester Metrolink Tram Map"
+        />
+      </div>
       <TramStopSelect
         handleSearch={getTramData}
         user={user}

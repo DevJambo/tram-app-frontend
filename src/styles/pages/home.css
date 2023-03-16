@@ -6,6 +6,10 @@
     object-fit: contain;
     margin: 0px;
     padding: 0px;
+    min-width: 1300px;
+}
+.tram-map-container {
+    min-height: 430px;
 }
 
 .home-page {
@@ -16,4 +20,8 @@
 .home-header {
     margin: 0;
 }
-
+@media screen and (max-width: 1300px) {
+    .tram-map-container {
+        overflow: scroll;
+    }
+}

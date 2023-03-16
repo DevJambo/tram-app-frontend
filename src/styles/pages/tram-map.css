@@ -1,6 +1,6 @@
 .googlemap {
     height: 100%;
-    width: 100%;
+    min-width: 1010px;
     margin-top: -58px;
     overflow: hidden;
 }
@@ -25,3 +25,8 @@
     /* border: 2px solid blue; */
     overflow: hidden;
 }
+ @media screen and (max-width: 1010px) {
+    .map-page {
+        overflow: auto;
+    }
+ }

@@ -1,8 +1,6 @@
 .footer {
     display: flex;
     flex-direction: row;
-    /* -ms-flex-align: end; */
-    /* position: fixed; */
     width: 100%;
     bottom: 0;
     height: 6vh;
@@ -13,6 +11,8 @@
     justify-content: space-between;
     align-items: center;
     flex-wrap: wrap;
+    position: fixed;
+    min-height: 50px;
 }
 
 
@@ -44,9 +44,6 @@
     width: 20px;
 }
 
-.dev-name {
-    margin-top: -50px;
-}
 .footer-items a:link,
 .footer-items a:visited {
     color: var(--navbar-active-link-color);
@@ -56,3 +53,17 @@
 .footer-items a:active,
 .footer-items a:hover {
     color: var(--navbar-link-color);
+}
+
+@media screen and (max-width: 790px) {
+    .footer-items {
+        font-size: 16px;
+    }
+    .git-links {
+        display: flex;
+        flex-direction: column;
+    }
+    .git-links {
+        padding: 0px 10px;
+    }
+}
