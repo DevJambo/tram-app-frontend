@@ -1,7 +1,8 @@
 .googlemap {
     height: 100%;
     width: 100%;
-    border: 2px solid blue;
+    margin-top: -58px;
+    overflow: hidden;
 }
 .map-header {
     font-size: 28px;
@@ -19,7 +20,8 @@
 }
 
 .map-container {
-    height: 100%;
-    width: 100vh;
-    border: 2px solid red;
+    height: 120%;
+    width: 120vh;
+    /* border: 2px solid blue; */
+    overflow: hidden;
 }

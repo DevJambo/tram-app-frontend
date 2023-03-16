@@ -12,13 +12,13 @@ const Footer = () => {
         </Link>
         <ul className="git-links">
           <li>
-            <a href="https://github.com/James-Sample" className="git-links">
+            <a href="https://github.com/James-Sample" className="git-link">
               <FaGithub />
               James Sample
             </a>
           </li>
           <li>
-            <a href="https://github.com/DevJambo" className="git-links">
+            <a href="https://github.com/DevJambo" className="git-link">
               <FaGithub />
               James Goodman
             </a>
