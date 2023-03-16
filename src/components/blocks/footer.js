@@ -1,30 +1,25 @@
 import React from "react";
-import { Link } from "react-router-dom";
 import { FaGithub } from "react-icons/fa";
 import "../../styles/blocks/footer.css";
 
 const Footer = () => {
   return (
     <div className="footer">
-      <div className="container">
-        <Link className="footer-logo" to="/">
-          <img className="logo" src="/images/bee1.png" alt="bee logo" />
-        </Link>
-        <ul className="git-links">
-          <li>
-            <a href="https://github.com/James-Sample" className="git-link">
-              <FaGithub />
-              James Sample
-            </a>
-          </li>
-          <li>
-            <a href="https://github.com/DevJambo" className="git-link">
-              <FaGithub />
-              James Goodman
-            </a>
-          </li>
-        </ul>
-      </div>
+      <img className="footer-logo2" src="/images/bee1.png" alt="bee logo" />
+      <ul className="git-links">
+        <li className="footer-items">
+          <a href="https://github.com/James-Sample" className="git-link">
+            <FaGithub className="git-icon" />
+            James Sample
+          </a>
+        </li>
+        <li className="footer-items">
+          <a href="https://github.com/DevJambo" className="git-link">
+            <FaGithub className="git-icon" />
+            <span className="dev-name">James Goodman</span>
+          </a>
+        </li>
+      </ul>
     </div>
   );
 };
