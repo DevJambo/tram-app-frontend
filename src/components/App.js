@@ -54,15 +54,17 @@ const App = () => {
 
   return (
     <div className="App">
-      <Navbar user={user} profile={profile} login={login} logOut={logOut} />
-      <Routes>
-        <Route
-          path="/"
-          element={<HomePage user={user} profile={profile} login={login} />}
-        />
-        <Route path="/tram-map" element={<TramMap />} />
-      </Routes>
-      {/* <Footer /> */}
+      <div className="content">
+        <Navbar user={user} profile={profile} login={login} logOut={logOut} />
+        <Routes>
+          <Route
+            path="/"
+            element={<HomePage user={user} profile={profile} login={login} />}
+          />
+          <Route path="/tram-map" element={<TramMap />} />
+        </Routes>
+      </div>
+      <Footer />
     </div>
   );
 };
