@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { ToastContainer, toast } from "react-toastify";
 import PropTypes from "prop-types";
 import tramstops from "../../content/tramstops.json";
 import Favourites from "./favourites";
@@ -9,7 +10,18 @@ import "../../styles/elements/button.css";
 
 const TramStopSelect = ({ handleSearch, user, profile, login }) => {
   const [station, setStation] = useState("Select Station");
-
+  const noStation = () => {
+    toast.warn("Please select a station", {
+      position: "top-center",
+      autoClose: 2000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "light",
+    });
+  };
   const initialState = {
     savedFaves: "",
   };
@@ -28,9 +40,13 @@ const TramStopSelect = ({ handleSearch, user, profile, login }) => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    handleSearch(station);
-    if (handleSearch(station)) {
-      windowScroll();
+    if (station === "Select Tram Stop" || station === "Select Station") {
+      noStation();
+    } else {
+      handleSearch(station);
+      if (handleSearch(station)) {
+        windowScroll();
+      }
     }
   };
 
@@ -77,6 +93,7 @@ const TramStopSelect = ({ handleSearch, user, profile, login }) => {
           setSavedFaves={setSavedFaves}
         />
       )}
+      <ToastContainer />
     </div>
   );
 };

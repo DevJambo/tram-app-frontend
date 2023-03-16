@@ -15,6 +15,7 @@
     flex-wrap: wrap;
 }
 
+
 .footer-logo2 {
     height: 5vh;
     display: inline-block;
@@ -55,4 +56,3 @@
 .footer-items a:active,
 .footer-items a:hover {
     color: var(--navbar-link-color);
-}
