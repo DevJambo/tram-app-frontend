@@ -8,7 +8,6 @@ const ServiceUpdates = ({ tramData }) => {
 
   const incomingTrams = tramData[0] ? tramData[0] : [];
   const windowScroll = () => {
-    console.log(messageHidden);
     window.scrollTo({
       top: 2000,
       behavior: "smooth",

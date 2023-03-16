@@ -12,10 +12,10 @@
 }
 
 .footer-logo {
-    height: 5vh;
-    display: inline-block;
+    height: 20%;
+    display: block;
 }
 
 .git-links {
-    display: inline-block;
+    display:inline-block
 }
