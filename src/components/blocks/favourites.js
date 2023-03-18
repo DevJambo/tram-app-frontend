@@ -49,14 +49,16 @@ const Favourites = ({
   return (
     <div className="favourites">
       <h2 className="favourite-header">
-        Your Favourite Tram Stop is {savedFaves}
+        {!savedFaves
+          ? `Please set a Favourite `
+          : `Your Favourite Tram Stop is ${savedFaves}`}
       </h2>
       <button
         className="searchFave button-2"
         onClick={handleSubmit}
         type="submit"
       >
-        View times for {savedFaves}
+        {!savedFaves ? `No Favourite` : `View times for ${savedFaves}`}
       </button>
     </div>
   );
