@@ -17,6 +17,9 @@
 .favourite-header {
     font-size: 28px;
 }
+.searchFave {
+  padding: 10px;
+}
 
 @media screen and (max-width: 790px) {
     .favourites {
